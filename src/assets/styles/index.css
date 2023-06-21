@@ -50,3 +50,10 @@
     font-weight: 600;
     src: url("../font/GTWalsheimPro-Medium.woff");
   }
+
+  .logo{
+    text-align: none;
+    color: inherit;
+    font-family: 'Blanka', sans-serif !important;    
+    text-decoration: none;
+  }

@@ -29,10 +29,8 @@ function Home() {
                 <img className="hero_bg" src={hero_bg} alt="" />
                 <div className="content">
                     <div className="text">
-                        <h1>Hedera Staking: Secure, Scalable, and Rewarding</h1>
-                        {/* <h1>Stake with Hedera: Embrace the Consensus, Reap the Rewards</h1> */}
-                        {/* <h1>Stake, Earn, and Grow with Hedera: Join the Staking Revolution</h1> */}
-                        {/* <h1>Krypto Staking, Trusted staking platform for the masses </h1> */}
+                       
+                        <h1>Krypto Staking, Trusted staking platform for the masses </h1>
                         <p>Simplified and secure participation in staking</p>
                         <Button color="violet.5" size="lg">
                             Connect Wallet
