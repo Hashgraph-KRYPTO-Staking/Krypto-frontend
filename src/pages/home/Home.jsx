@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import hero_bg from "../../assets/svg/hero_bg.svg";
 import hero_img from "../../assets/svg/hero_img.svg";
 import how_img from "../../assets/svg/Figure.svg";
@@ -9,7 +9,7 @@ import {
     VscVerified,
 } from "react-icons/vsc";
 import { Link as A } from "react-router-dom";
-import { ActionIcon, Button } from "@mantine/core";
+import { ActionIcon, Burger, Button, Drawer } from "@mantine/core";
 import {
     TfiLinkedin,
     TfiFacebook,
@@ -19,6 +19,7 @@ import {
 import { validator_img } from "../../data";
 
 function Home() {
+    const [showNav, setShowNav] = useState(false);
     return (
         <>
             <div className="top_bar">
@@ -37,7 +38,31 @@ function Home() {
                     </li>
                 </ul>
                 <Button color="violet.5">Connect Wallet</Button>
+                <div className="burger_container">
+                <Burger
+                    onClick={() => setShowNav(!showNav)}
+                    // opened={showNav}
+                    color="white"
+                />
+                </div>
             </div>
+            <Drawer w={"100%"} opened={showNav} onClose={() => setShowNav(false)}>
+            <ul style={{display:"grid",gap:"20px", textAlign:"center"}}>
+                    <li>
+                        <a href="">Network</a>
+                    </li>
+                    <li>
+                        <a href="">Community</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                    <Button color="violet.5">Connect Wallet</Button>
+
+                    </li>
+                </ul>
+            </Drawer>
             <section className="hero">
                 <img className="hero_bg" src={hero_bg} alt="" />
                 <div className="content">
@@ -118,15 +143,15 @@ function Home() {
             </div>
 
             <section className="validator">
-              <div className="heading_container">
-              <h1>Validators</h1>
-                <p>Explore validators that help grow Lido</p>
-              </div>
-              <div className="content">
-                {
-                    validator_img.map((img)=> <img key={img} src={img} alt="" />)
-                }
-              </div>
+                <div className="heading_container">
+                    <h1>Validators</h1>
+                    <p>Explore validators that help grow Lido</p>
+                </div>
+                <div className="content">
+                    {validator_img.map((img) => (
+                        <img key={img} src={img} alt="" />
+                    ))}
+                </div>
             </section>
 
             <section className="subscribe">
