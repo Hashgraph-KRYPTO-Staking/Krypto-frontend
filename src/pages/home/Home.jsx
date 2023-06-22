@@ -145,7 +145,7 @@ function Home() {
                     <footer>
                         <div className="footer_content">
                             <div className="footer_info">
-                                <h1>Stakepro</h1>
+                                <h1>Krypto Stake</h1>
                                 <div className="footer_details">
                                     <ul>
                                         <p>Location: Delaware, US</p>
